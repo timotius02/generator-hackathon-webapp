@@ -31,8 +31,8 @@ Optional:
 
 If you need to install node-sass
 ```
-$ npm install node-sass
-no
+$ npm install -g node-sass
+```
 
 ## Getting Started
 
