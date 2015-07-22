@@ -2,13 +2,14 @@
   "name": "generator-hackathon-webapp",
   "version": "1.0.0",
   "description": "Scaffold out a modern front-end web app for hackathons",
-  "license": "BSD",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/timotius02/generator-hackathon-webapp.git"
   },
   "author": {
-    "name": "Timotius Sitorus"
+    "name": "Timotius Sitorus",
+    "url": "https://github.com/timotius02"
   },
   "main": "app/index.js",
   "engines": {
@@ -49,12 +50,5 @@
   "bugs": {
     "url": "https://github.com/timotius02/generator-hackathon-webapp/issues"
   },
-  "homepage": "https://github.com/timotius02/generator-hackathon-webapp#readme",
-  "maintainers": [
-    {
-      "name": "timotius02"
-    }
-  ],
-  "directories": {},
-  "readme": "ERROR: No README data found!"
+  "homepage": "https://github.com/timotius02/generator-hackathon-webapp#readme"
 }
