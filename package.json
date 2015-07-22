@@ -1,0 +1,75 @@
+{
+  "name": "generator-hackathon-webapp",
+  "version": "1.0.0",
+  "description": "Scaffold out a modern front-end web app for hackathons",
+  "license": "BSD",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/timotius02/generator-hackathon-webapp.git"
+  },
+  "author": {
+    "name": "Timotius Sitorus"
+  },
+  "main": "app/index.js",
+  "engines": {
+    "node": ">=0.10.0",
+    "npm": ">=1.3"
+  },
+  "scripts": {
+    "test": "mocha --reporter spec"
+  },
+  "files": [
+    "app"
+  ],
+  "keywords": [
+    "yeoman-generator",
+    "web",
+    "app",
+    "front-end",
+    "ES6",
+    "jquery",
+    "gulp",
+    "browserify",
+    "hackathon"
+  ],
+  "dependencies": {
+    "chalk": "^1.0.0",
+    "generator-jasmine": "^0.2.1",
+    "generator-mocha": "^0.2.0",
+    "mkdirp": "^0.5.1",
+    "underscore.string": "^3.1.1",
+    "wiredep": "^2.2.2",
+    "yeoman-assert": "^2.0.0",
+    "yeoman-generator": "^0.20.1",
+    "yosay": "^1.0.0"
+  },
+  "devDependencies": {
+    "mocha": "*"
+  },
+  "gitHead": "b839b0e67770effbeae691f0dcf48c5dea36d5a5",
+  "bugs": {
+    "url": "https://github.com/timotius02/generator-hackathon-webapp/issues"
+  },
+  "homepage": "https://github.com/yeoman/generator-gulp-webapp#readme",
+  "_id": "generator-gulp-webapp@1.0.3",
+  "_shasum": "de26396da2a60a946382e71ac1b4b120730c30db",
+  "_from": "generator-gulp-webapp@*",
+  "_npmVersion": "2.9.1",
+  "_nodeVersion": "0.12.3",
+  "_npmUser": {
+    "name": "silvenon",
+    "email": "matija.marohnic@gmail.com"
+  },
+  "dist": {
+    "shasum": "de26396da2a60a946382e71ac1b4b120730c30db",
+    "tarball": "http://registry.npmjs.org/generator-gulp-webapp/-/generator-gulp-webapp-1.0.3.tgz"
+  },
+  "maintainers": [
+    {
+      "name": "timotius02"
+    },
+  ],
+  "directories": {},
+  "_resolved": "http://registry.npmjs.org/generator-gulp-webapp/-/generator-gulp-webapp-1.0.3.tgz",
+  "readme": "ERROR: No README data found!"
+}
