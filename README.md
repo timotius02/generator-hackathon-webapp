@@ -2,6 +2,8 @@
 
 > [Yeoman](http://yeoman.io) generator for quickly building modern web apps using Gulp, Browserify, and Babel
 
+![](screenshot.png)
+
 ## What's inside?
 
 Bundled:
@@ -30,8 +32,7 @@ Optional:
 If you need to install node-sass
 ```
 $ npm install node-sass
-```
-
+no
 
 ## Getting Started
 

@@ -121,7 +121,7 @@ module.exports = generators.Base.extend({
           includeSass: this.includeSass,
           includeBootstrap: this.includeBootstrap,
           includeES6: this.includeES6,
-          includeGHPages: this.includeGHPages
+          includeGHPages: this.includeGHPages,
           testFramework: this.options['test-framework']
         }
       );
