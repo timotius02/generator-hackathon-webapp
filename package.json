@@ -46,30 +46,15 @@
   "devDependencies": {
     "mocha": "*"
   },
-  "gitHead": "b839b0e67770effbeae691f0dcf48c5dea36d5a5",
   "bugs": {
     "url": "https://github.com/timotius02/generator-hackathon-webapp/issues"
   },
-  "homepage": "https://github.com/yeoman/generator-gulp-webapp#readme",
-  "_id": "generator-gulp-webapp@1.0.3",
-  "_shasum": "de26396da2a60a946382e71ac1b4b120730c30db",
-  "_from": "generator-gulp-webapp@*",
-  "_npmVersion": "2.9.1",
-  "_nodeVersion": "0.12.3",
-  "_npmUser": {
-    "name": "silvenon",
-    "email": "matija.marohnic@gmail.com"
-  },
-  "dist": {
-    "shasum": "de26396da2a60a946382e71ac1b4b120730c30db",
-    "tarball": "http://registry.npmjs.org/generator-gulp-webapp/-/generator-gulp-webapp-1.0.3.tgz"
-  },
+  "homepage": "https://github.com/timotius02/generator-hackathon-webapp#readme",
   "maintainers": [
     {
       "name": "timotius02"
     }
   ],
   "directories": {},
-  "_resolved": "http://registry.npmjs.org/generator-gulp-webapp/-/generator-gulp-webapp-1.0.3.tgz",
   "readme": "ERROR: No README data found!"
 }
