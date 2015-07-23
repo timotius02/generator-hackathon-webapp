@@ -1,4 +1,4 @@
-# generator-hackathon-webapp 
+# generator-hackathon-webapp [![Build Status](https://travis-ci.org/timotius02/generator-hackathon-webapp.svg?branch=master)](https://travis-ci.org/timotius02/generator-hackathon-webapp)
 
 > [Yeoman](http://yeoman.io) generator for quickly building modern web apps using Gulp, Browserify, and Babel
 
