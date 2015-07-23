@@ -51,7 +51,7 @@ module.exports = generators.Base.extend({
         value: 'includeModernizr',
         checked: true
       }, {
-        name: 'Github Pages',
+        name: 'Deploy to Github Pages',
         value: 'includeGHPages',
         checked: true
       }]
