@@ -35,17 +35,15 @@
   ],
   "dependencies": {
     "chalk": "^1.0.0",
-    "generator-jasmine": "^0.2.1",
-    "generator-mocha": "^0.2.0",
     "mkdirp": "^0.5.1",
     "underscore.string": "^3.1.1",
     "wiredep": "^2.2.2",
-    "yeoman-assert": "^2.0.0",
     "yeoman-generator": "^0.20.1",
     "yosay": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*"
+    "mocha": "*",
+    "yeoman-assert": "^2.0.0"
   },
   "bugs": {
     "url": "https://github.com/timotius02/generator-hackathon-webapp/issues"

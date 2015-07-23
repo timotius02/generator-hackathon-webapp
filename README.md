@@ -4,6 +4,10 @@
 
 ![](screenshot.png)
 
+###Disclaimer
+
+*This generator is meant for quickly iterating on projects and not suitable for production level environment.*
+
 ## What's inside?
 
 Bundled:
@@ -12,17 +16,17 @@ Bundled:
 * [Bower](http://bower.io/)
 * [Browserify](http://browserify.org/) with Watchify support 
 * livereload via [BrowserSync](http://www.browsersync.io/)
-* [Mocha](http://mochajs.org/) for testing
 * Sourcemaps for styles and scripts
+* ES6 & React Support via [Babel](https://babeljs.io/)
 
 Optional: 
 
 * Sass Compilation via [Libsass](http://libsass.org/)
 * [Twitter Bootstrap](http://getbootstrap.com/) - Sass/Css version
 * [Modernizr](http://modernizr.com/)
-* ES6 & React Support via [Babel](https://babeljs.io/)
 * [jQuery](https://jquery.com/)
 * Quick deploy to [Github Pages](https://pages.github.com/)
+
 
 ## Requirements
 
@@ -45,9 +49,8 @@ $ yo generator-hackathon-webapp                    # ...and run it.
 ## Gulp Tasks
 
 - Run `gulp serve` to preview and watch for changes
-- Run `gulp serve:test` to run the tests in the browser
-- Run `gulp` to build your webapp for production
-- Run `gulp serve:dist` to preview the production build
+- Run `gulp` to build your webapp before deploying
+- Run `gulp serve:dist` to preview the deploy build
 
 ## License
 

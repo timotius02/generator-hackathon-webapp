@@ -8,7 +8,6 @@ var _s = require('underscore.string');
 
 module.exports = generators.Base.extend({
   constructor: function () {
-    var testLocal;
 
     generators.Base.apply(this, arguments);
 
@@ -22,25 +21,6 @@ module.exports = generators.Base.extend({
       type: Boolean
     });
 
-    this.option('test-framework', {
-      desc: 'Test framework to be invoked',
-      type: String,
-      defaults: 'mocha'
-    });
-
-    if (this.options['test-framework'] === 'mocha') {
-      testLocal = require.resolve('generator-mocha/generators/app/index.js');
-    } else if (this.options['test-framework'] === 'jasmine') {
-      testLocal = require.resolve('generator-jasmine/generators/app/index.js');
-    }
-
-    this.composeWith(this.options['test-framework'] + ':app', {
-      options: {
-        'skip-install': this.options['skip-install']
-      }
-    }, {
-      local: testLocal
-    });
   },
 
   initializing: function () {
@@ -71,10 +51,6 @@ module.exports = generators.Base.extend({
         value: 'includeModernizr',
         checked: true
       }, {
-        name: 'ES6 via Babel',
-        value: 'includeES6',
-        checked: true
-      }, {
         name: 'Github Pages',
         value: 'includeGHPages',
         checked: true
@@ -101,7 +77,6 @@ module.exports = generators.Base.extend({
       this.includeSass = hasFeature('includeSass');
       this.includeBootstrap = hasFeature('includeBootstrap');
       this.includeModernizr = hasFeature('includeModernizr');
-      this.includeES6 = hasFeature('includeES6');
       this.includeGHPages = hasFeature('includeGHPages');
       this.includeJQuery = answers.includeJQuery;
 
@@ -120,9 +95,7 @@ module.exports = generators.Base.extend({
           version: this.pkg.version,
           includeSass: this.includeSass,
           includeBootstrap: this.includeBootstrap,
-          includeES6: this.includeES6,
-          includeGHPages: this.includeGHPages,
-          testFramework: this.options['test-framework']
+          includeGHPages: this.includeGHPages
         }
       );
     },
@@ -133,7 +106,6 @@ module.exports = generators.Base.extend({
         this.destinationPath('package.json'),
         {
           includeSass: this.includeSass,
-          includeES6: this.includeES6,
           includeGHPages: this.includeGHPages
         }
       );
@@ -266,7 +238,6 @@ module.exports = generators.Base.extend({
           includeSass: this.includeSass,
           includeBootstrap: this.includeBootstrap,
           includeModernizr: this.includeModernizr,
-          includeES6: this.includeES6,
           includeJQuery: this.includeJQuery,
           bsPath: bsPath,
           bsPlugins: [

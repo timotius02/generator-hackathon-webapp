@@ -55,10 +55,9 @@
           <p>Sleek, intuitive, and powerful mobile first front-end framework for faster and easier web development.</p><% if (includeModernizr) { %>
           <h4>Modernizr</h4>
           <p>Modernizr is an open-source JavaScript library that helps you build the next generation of HTML5 and CSS3-powered websites.</p>
-          <% } %> <% if (includeModernizr) { %>
+          <% } %> 
           <h4>Babel</h4>
           <p>Babel is a compiler for writing next generation JavaScript.</p>
-          <% } %>
         </div>
       </div>
 
@@ -74,8 +73,8 @@
         <li>HTML5 Boilerplate</li><% if (includeSass) { %>
         <li>Sass</li><% } if (includeModernizr) { %>
         <li>Modernizr</li><% } if (includeJQuery) { %>
-        <li>jQuery</li><% } if (includeES6) { %>
-        <li>Babel</li><% } %> 
+        <li>jQuery</li> <% } %> 
+        <li>Babel</li>
       </ul>
     </div>
     <% } %>

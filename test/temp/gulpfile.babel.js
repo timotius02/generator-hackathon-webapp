@@ -18,17 +18,9 @@ const appDir = './app/';
 const jsMainFile = appDir + 'scripts/main.js';
 const jsBundleFile = 'main.js';
 
-gulp.task('styles', () => {<% if (includeSass) { %>
-  return gulp.src('app/styles/*.scss')
-    .pipe($.plumber())
-    .pipe($.sourcemaps.init())
-    .pipe($.sass.sync({
-      outputStyle: 'expanded',
-      precision: 10,
-      includePaths: ['.']
-    }).on('error', $.sass.logError))<% } else { %>
+gulp.task('styles', () => {
   return gulp.src('app/styles/*.css')
-    .pipe($.sourcemaps.init())<% } %>
+    .pipe($.sourcemaps.init())
     .pipe($.autoprefixer({browsers: ['last 1 version']}))
     .pipe($.sourcemaps.write())
     .pipe(gulp.dest('.tmp/styles'))
@@ -173,27 +165,14 @@ gulp.task('serve:dist', () => {
 });
 
 // inject bower components
-gulp.task('wiredep', () => {<% if (includeSass) { %>
-  gulp.src('app/styles/*.scss')
-    .pipe(wiredep({
-      ignorePath: /^(\.\.\/)+/
-    }))
-    .pipe(gulp.dest('app/styles'));
-<% } %>
+gulp.task('wiredep', () => {
   gulp.src('app/*.html')
-    .pipe(wiredep({<% if (includeBootstrap) { if (includeSass) { %>
-      exclude: ['bootstrap-sass'],<% } else { %>
-      exclude: ['bootstrap.js'],<% }} %>
+    .pipe(wiredep({
       ignorePath: /^(\.\.\/)*\.\./
     }))
     .pipe(gulp.dest('app'));
 });
-<% if (includeGHPages) {%>
-gulp.task('deploy', function() {
-  return gulp.src('./dist/**/*')
-    .pipe($.ghPages()); // https://www.npmjs.com/package/gulp-gh-pages
-});
-<% } %>
+
 
 gulp.task('build', ['scripts', 'html', 'images', 'fonts', 'extras'], () => {
   return gulp.src('dist/**/*').pipe($.size({
