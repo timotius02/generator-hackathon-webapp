@@ -6,7 +6,7 @@
 
 ###Disclaimer
 
-*This generator is meant for quickly iterating on projects and not suitable for production level environment.*
+**This generator is meant for quickly iterating on projects and not suitable for production level environment.**
 
 ## What's inside?
 
