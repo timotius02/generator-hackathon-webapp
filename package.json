@@ -39,11 +39,11 @@
     "underscore.string": "^3.1.1",
     "wiredep": "^2.2.2",
     "yeoman-generator": "^0.20.1",
+    "yeoman-assert": "^2.0.0",
     "yosay": "^1.0.0"
   },
   "devDependencies": {
-    "mocha": "*",
-    "yeoman-assert": "^2.0.0"
+    "mocha": "*"
   },
   "bugs": {
     "url": "https://github.com/timotius02/generator-hackathon-webapp/issues"
