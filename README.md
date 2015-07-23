@@ -52,6 +52,11 @@ $ yo generator-hackathon-webapp                    # ...and run it.
 - Run `gulp` to build your webapp before deploying
 - Run `gulp serve:dist` to preview the deploy build
 
+## Deploying
+- Github Pages: 
+	- **Project must contain have Github Repo**
+	- Run `gulp deploy` to build and deploy your app to the gh-pages branch of your repo
+
 ## License
 
 MIT

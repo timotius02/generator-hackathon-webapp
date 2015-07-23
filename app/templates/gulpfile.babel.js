@@ -189,7 +189,7 @@ gulp.task('wiredep', () => {<% if (includeSass) { %>
     .pipe(gulp.dest('app'));
 });
 <% if (includeGHPages) {%>
-gulp.task('deploy', function() {
+gulp.task('deploy', ['build'], function() {
   return gulp.src('./dist/**/*')
     .pipe($.ghPages()); // https://www.npmjs.com/package/gulp-gh-pages
 });
