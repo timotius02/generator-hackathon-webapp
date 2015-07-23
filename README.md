@@ -54,8 +54,10 @@ $ yo generator-hackathon-webapp                    # ...and run it.
 
 ## Deploying
 - Github Pages: 
-	- **Project must contain have Github Repo**
+	- **Project must have Github Repo**
+	- Default project expects 'origin' remote
 	- Run `gulp deploy` to build and deploy your app to the gh-pages branch of your repo
+	- For More options [gulp-gh-pages](https://www.npmjs.com/package/gulp-gh-pages)
 
 ## License
 
