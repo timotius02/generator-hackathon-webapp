@@ -57,12 +57,11 @@ gulp.task('scripts', () => {
 gulp.task('watchify', () => {
   const watcher = watchify(bundler);
   return watcher
-    .on('error', function (err) {
-      $.util.log(err.toString());
-      this.emit('end');
-    })
     .on('update', () => {
       watcher.bundle()
+        .on('error', (err) => {
+          $.util.log($.util.colors.red(err.toString()));
+        })
         .pipe(source(jsBundleFile))
         .pipe(buffer())
         .pipe($.sourcemaps.init({
@@ -78,10 +77,13 @@ gulp.task('watchify', () => {
 
     })
     .bundle() // Create the initial bundle when starting the task
+    .on('error', function(err) {
+      $.util.log($.util.colors.red(err.toString()));
+      this.emit('end');
+    })
     .pipe(source(jsBundleFile))
     .pipe(gulp.dest('.tmp/scripts'));
 });
-
 gulp.task('html', ['styles'], () => {
   const assets = $.useref.assets({
     searchPath: ['.tmp', 'app', '.']
