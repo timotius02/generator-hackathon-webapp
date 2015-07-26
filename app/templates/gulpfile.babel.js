@@ -50,7 +50,7 @@ gulp.task('scripts', () => {
     .bundle()
     .pipe(source(jsBundleFile))
     .pipe(buffer())
-    .pipe(uglify())
+    .pipe($.uglify())
     .pipe(gulp.dest('dist/scripts'));
 });
 
