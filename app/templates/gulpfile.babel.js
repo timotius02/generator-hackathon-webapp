@@ -26,7 +26,10 @@ gulp.task('styles', () => {<% if (includeSass) { %>
       outputStyle: 'expanded',
       precision: 10,
       includePaths: ['.']
-    }).on('error', $.sass.logError))<% } else { %>
+    }).on('error', (err) => {
+      $.sass.logError(err);
+      $.notify("Sass Error!");
+    }))<% } else { %>
   return gulp.src('app/styles/*.css')
     .pipe($.sourcemaps.init())<% } %>
     .pipe($.autoprefixer({browsers: ['last 1 version']}))
@@ -61,6 +64,7 @@ gulp.task('watchify', () => {
       watcher.bundle()
         .on('error', (err) => {
           $.util.log($.util.colors.red(err.toString()));
+          $.notify("JavaScript Error!");
         })
         .pipe(source(jsBundleFile))
         .pipe(buffer())
@@ -79,6 +83,7 @@ gulp.task('watchify', () => {
     .bundle() // Create the initial bundle when starting the task
     .on('error', function(err) {
       $.util.log($.util.colors.red(err.toString()));
+      $.notify("JavaScript Error!");
       this.emit('end');
     })
     .pipe(source(jsBundleFile))
@@ -116,14 +121,16 @@ gulp.task('images', () => {
         }]
       }))
       .on('error', function(err) {
-        console.log(err);
+        $.util.log($.util.colors.red(err.toString()));
+        $.notify("JavaScript Error!");
         this.end();
       })))
     .pipe(gulp.dest('dist/images'));
 });
 
 gulp.task('fonts', () => {
-  return gulp.src('app/fonts/**/*')
+    return gulp.src(require('main-bower-files')('**/*.{eot,svg,ttf,woff,woff2}', function (err) {})
+    .concat('app/fonts/**/*'))
     .pipe(gulp.dest('.tmp/fonts'))
     .pipe(gulp.dest('dist/fonts'));
 });
