@@ -1,64 +1,38 @@
-# generator-hackathon-webapp [![Build Status](https://travis-ci.org/timotius02/generator-hackathon-webapp.svg?branch=master)](https://travis-ci.org/timotius02/generator-hackathon-webapp)
+# generator-hackathon-webapp [![NPM version][npm-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Dependency Status][daviddm-image]][daviddm-url] [![Coverage percentage][coveralls-image]][coveralls-url]
+> Scaffold out a modern front-end web app for hackathons
 
-> [Yeoman](http://yeoman.io) generator for quickly building modern web apps using Gulp, Browserify, and Babel
+## Installation
 
-![](screenshot.png)
+First, install [Yeoman](http://yeoman.io) and generator-hackathon-webapp using [npm](https://www.npmjs.com/) (we assume you have pre-installed [node.js](https://nodejs.org/)).
 
-### Disclaimer
-
-**This generator is meant for quickly iterating on projects and not suitable for production level environment.**
-
-## What's inside?
-
-Bundled:
-
-* [Gulp](http://gulpjs.com/)
-* [Bower](http://bower.io/)
-* [Browserify](http://browserify.org/) with Watchify support 
-* livereload via [BrowserSync](http://www.browsersync.io/)
-* Sourcemaps for styles and scripts
-* ES6 & React Support via [Babel](https://babeljs.io/)
-
-Optional: 
-
-* Sass Compilation via [Libsass](http://libsass.org/)
-* [Twitter Bootstrap](http://getbootstrap.com/) - Sass/Css version
-* [Modernizr](http://modernizr.com/)
-* [jQuery](https://jquery.com/)
-* Quick deploy to [Github Pages](https://pages.github.com/)
-
-
-## Requirements
-
-* node.js >= 0.12
-* Node-Sass >= 3.2 for Sass compilation
-
-If you need to install node-sass
-```
-$ npm install -g node-sass
+```bash
+npm install -g yo
+npm install -g generator-hackathon-webapp
 ```
 
-## Getting Started
+Then generate your new project:
 
-```
-$ npm install -g yo                                # Install Yeoman (if you don't have it yet)...
-$ npm install -g generator-hackathon-webapp   	   # ...then install this generator...
-$ yo generator-hackathon-webapp                    # ...and run it.
+```bash
+yo hackathon-webapp
 ```
 
-## Gulp Tasks
+## Getting To Know Yeoman
 
-- Run `gulp serve` to preview and watch for changes
-- Run `gulp` to build your webapp before deploying
-- Run `gulp serve:dist` to preview the deploy build
-
-## Deploying
-- Github Pages: 
-	- **Project must have Github Repo**
-	- Default project expects 'origin' remote
-	- Run `gulp deploy` to build and deploy your app to the gh-pages branch of your repo
-	- For more options [gulp-gh-pages](https://www.npmjs.com/package/gulp-gh-pages)
+ * Yeoman has a heart of gold.
+ * Yeoman is a person with feelings and opinions, but is very easy to work with.
+ * Yeoman can be too opinionated at times but is easily convinced not to be.
+ * Feel free to [learn more about Yeoman](http://yeoman.io/).
 
 ## License
 
-MIT
+MIT © [timotius02](timsitorus.com)
+
+
+[npm-image]: https://badge.fury.io/js/generator-hackathon-webapp.svg
+[npm-url]: https://npmjs.org/package/generator-hackathon-webapp
+[travis-image]: https://travis-ci.org/timotius02/generator-hackathon-webapp.svg?branch=master
+[travis-url]: https://travis-ci.org/timotius02/generator-hackathon-webapp
+[daviddm-image]: https://david-dm.org/timotius02/generator-hackathon-webapp.svg?theme=shields.io
+[daviddm-url]: https://david-dm.org/timotius02/generator-hackathon-webapp
+[coveralls-image]: https://coveralls.io/repos/timotius02/generator-hackathon-webapp/badge.svg
+[coveralls-url]: https://coveralls.io/r/timotius02/generator-hackathon-webapp
